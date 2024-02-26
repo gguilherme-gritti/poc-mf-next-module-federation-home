@@ -11,6 +11,9 @@ module.exports = {
         new NextFederationPlugin({
           name: "home",
           filename: "static/chunks/remoteEntry.js",
+          remotes: {
+            cart: `cart@http://localhost:3004/_next/static/chunks/remoteEntry.js`,
+          },
           exposes: {
             "./screen/Home": "./src/screen/Home.tsx",
           },
